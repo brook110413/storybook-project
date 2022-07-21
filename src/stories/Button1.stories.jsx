@@ -31,7 +31,7 @@ Monetization.args = {
 export const MonetizationWhite = Template.bind({});
 MonetizationWhite.args = {
   bgTheme: BUTTON_THEME.WHITE,
-  label: 'MonetizationWhite',
+  label: 'Monetization',
   labelColor: BUTTON_TEXT_COLOR.RED,
 };
 
