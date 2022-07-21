@@ -1,10 +1,60 @@
-import { StyledButton } from './Button1';
+import Button, { BUTTON_THEME, BUTTON_TEXT_COLOR } from './Button1';
+import { COLORS } from '../theme';
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
   title: 'Example/Button1',
-  component: StyledButton,
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+  component: Button,
+  parameters: {
+    backgrounds: {
+      values: [
+        {
+          name: 'red',
+          value: COLORS.lightRed,
+        },
+        {
+          name: 'yellow',
+          value: COLORS.yellow,
+        },
+      ],
+    },
+  },
 };
 
-export const Primary = () => <StyledButton>123</StyledButton>;
+const Template = (args) => <Button {...args} />;
+
+export const Monetization = Template.bind({});
+Monetization.args = {
+  bgTheme: BUTTON_THEME.RED,
+  label: 'Monetization',
+};
+
+export const MonetizationWhite = Template.bind({});
+MonetizationWhite.args = {
+  bgTheme: BUTTON_THEME.WHITE,
+  label: 'MonetizationWhite',
+  labelColor: BUTTON_TEXT_COLOR.RED,
+};
+
+export const Interactive = Template.bind({});
+Interactive.args = {
+  bgTheme: BUTTON_THEME.YELLOW,
+  label: 'Interactive',
+};
+
+export const InteractiveWhite = Template.bind({});
+InteractiveWhite.args = {
+  bgTheme: BUTTON_THEME.WHITE,
+  label: 'Interactive',
+  labelColor: BUTTON_TEXT_COLOR.DARK,
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
+  label: 'Disabled',
+};
+
+export const LowerPriority = Template.bind({});
+LowerPriority.args = {
+  label: 'LowerPriority',
+};

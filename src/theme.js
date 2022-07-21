@@ -52,4 +52,129 @@ const theme = createTheme({
   },
 });
 
+theme.typography = {
+  ...theme.typography,
+  h1: {
+    // fontFamily:
+    //     FONTFAMILY_HEADER_MAPPING[lang] ||
+    //     FONTFAMILY_HEADER_MAPPING[LANG.US],
+    letterSpacing: 0,
+    fontWeight: 500,
+    fontSize: '32px',
+    lineHeight: '42px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '24px',
+      lineHeight: '30px',
+    },
+  },
+  h2: {
+    // fontFamily:
+    //     FONTFAMILY_HEADER_MAPPING[lang] ||
+    //     FONTFAMILY_HEADER_MAPPING[LANG.US],
+    letterSpacing: 0,
+    fontWeight: 500,
+    fontSize: '24px',
+    lineHeight: '28px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '18px',
+      lineHeight: '26px',
+    },
+  },
+  h3: {
+    // fontFamily:
+    //     FONTFAMILY_HEADER_MAPPING[lang] ||
+    //     FONTFAMILY_HEADER_MAPPING[LANG.US],
+    letterSpacing: 0,
+    fontWeight: 500,
+    fontSize: '21px',
+    lineHeight: '25px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '16px',
+      lineHeight: '23px',
+    },
+  },
+  // p1
+  body1: {
+    // fontFamily:
+    //     FONTFAMILY_NORMAL_MAPPING[lang] ||
+    //     FONTFAMILY_NORMAL_MAPPING[LANG.US],
+    letterSpacing: 0,
+    fontWeight: 500,
+    fontSize: '18px',
+    lineHeight: '26px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '16px',
+      lineHeight: '23px',
+    },
+  },
+  // p2
+  subtitle1: {
+    // fontFamily:
+    //     FONTFAMILY_NORMAL_MAPPING[lang] ||
+    //     FONTFAMILY_NORMAL_MAPPING[LANG.US],
+    letterSpacing: 0,
+    fontWeight: 500,
+    fontSize: '16px',
+    lineHeight: '23px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '14px',
+      lineHeight: '20px',
+    },
+  },
+  // p3
+  body2: {
+    // fontFamily:
+    //     FONTFAMILY_NORMAL_MAPPING[lang] ||
+    //     FONTFAMILY_NORMAL_MAPPING[LANG.US],
+    letterSpacing: 0,
+    fontWeight: 500,
+    fontSize: '14px',
+    lineHeight: '20px',
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '12px',
+      lineHeight: '16px',
+    },
+  },
+  // p4
+  subtitle2: {
+    // fontFamily:
+    //     FONTFAMILY_NORMAL_MAPPING[lang] ||
+    //     FONTFAMILY_NORMAL_MAPPING[LANG.US],
+    letterSpacing: 0,
+    fontWeight: 500,
+    fontSize: '12px',
+    lineHeight: '16px',
+  },
+  button: {
+    // fontFamily:
+    //     FONTFAMILY_HEADER_MAPPING[lang] ||
+    //     FONTFAMILY_HEADER_MAPPING[LANG.US],
+    letterSpacing: 0,
+    fontWeight: 500,
+    fontSize: '18px',
+    lineHeight: '20px',
+    textTransform: 'none',
+  },
+  subscribeTitle: {
+    textAlign: 'center',
+    lineHeight: '57px',
+    fontSize: '42px',
+    fontWeight: 800,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '24px',
+      lineHeight: '33px',
+    },
+  },
+  subscribeSubTitle: {
+    textAlign: 'center',
+    fontSize: '22px',
+    lineHeight: '30px',
+    fontWeight: 800,
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '18px',
+      lineHeight: '18px',
+    },
+  },
+};
+
 export default theme;
