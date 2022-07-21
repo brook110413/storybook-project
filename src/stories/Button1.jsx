@@ -20,13 +20,12 @@ export const BUTTON_TEXT_COLOR = {
   RED: COLORS.lightRed,
 };
 
-const StyledButton = ({ label, bgTheme, disabled, labelColor, ...props }) => {
+const StyledButton = ({ label, bgTheme, labelColor, ...props }) => {
   const classes = useStyles({ labelColor: labelColor });
 
   return (
     <Button
       variant="contained"
-      disabled={disabled}
       classes={{
         root: `${classes.root} ${classes[bgTheme]}`,
         label: classes.label,
@@ -45,13 +44,11 @@ StyledButton.propTypes = {
     BUTTON_THEME.RED,
     BUTTON_THEME.WHITE,
   ]),
-  disabled: PropTypes.bool,
   labelColor: PropTypes.string,
 };
 
 StyledButton.defaultProps = {
   bgTheme: null,
-  disabled: false,
   labelColor: null,
 };
 

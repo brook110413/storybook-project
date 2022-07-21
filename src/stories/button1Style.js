@@ -25,20 +25,20 @@ const button1Style = (theme) => ({
   },
   redButton: {
     color: theme.palette.common.white,
-    backgroundColor: theme.palette.common.lightRed,
     WebkitTextFillColor: theme.palette.common.white,
+    backgroundColor: theme.palette.common.lightRed,
     '&:hover': {
       backgroundColor: theme.palette.common.lightRed,
     },
   },
-  whiteButton: {
-    color: (props) => props.labelColor,
-    WebkitTextFillColor: (props) => props.labelColor,
+  whiteButton: (props) => ({
+    color: props.labelColor || theme.palette.common.dark,
+    WebkitTextFillColor: props.labelColor || theme.palette.common.dark,
     backgroundColor: theme.palette.common.white,
     '&:hover': {
       backgroundColor: theme.palette.common.white,
     },
-  },
+  }),
   label: {
     ...theme.typography.button,
   },
