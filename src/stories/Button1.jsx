@@ -44,7 +44,10 @@ CustomButton.propTypes = {
     BUTTON_THEME.RED,
     BUTTON_THEME.WHITE,
   ]),
-  labelColor: PropTypes.string,
+  labelColor: PropTypes.oneOf([
+    BUTTON_LABEL_COLOR.RED,
+    BUTTON_LABEL_COLOR.DARK,
+  ]),
   onClick: PropTypes.func,
   disabled: PropTypes.bool,
 };
