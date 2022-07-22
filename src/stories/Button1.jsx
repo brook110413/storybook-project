@@ -15,12 +15,12 @@ export const BUTTON_THEME = {
   WHITE: 'whiteButton',
 };
 
-export const BUTTON_TEXT_COLOR = {
+export const BUTTON_LABEL_COLOR = {
   DARK: COLORS.dark,
   RED: COLORS.lightRed,
 };
 
-const StyledButton = ({ label, theme, labelColor, ...props }) => {
+const CustomButton = ({ children, theme, labelColor, ...props }) => {
   const classes = useStyles({ labelColor: labelColor });
 
   return (
@@ -32,24 +32,28 @@ const StyledButton = ({ label, theme, labelColor, ...props }) => {
       }}
       {...props}
     >
-      {label}
+      {children}
     </Button>
   );
 };
 
-StyledButton.propTypes = {
-  label: PropTypes.string.isRequired,
+CustomButton.propTypes = {
+  children: PropTypes.string.isRequired,
   theme: PropTypes.oneOf([
     BUTTON_THEME.YELLOW,
     BUTTON_THEME.RED,
     BUTTON_THEME.WHITE,
   ]),
   labelColor: PropTypes.string,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 
-StyledButton.defaultProps = {
+CustomButton.defaultProps = {
   theme: null,
   labelColor: null,
+  onClick: undefined,
+  disabled: false,
 };
 
-export default StyledButton;
+export default CustomButton;

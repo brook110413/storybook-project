@@ -1,9 +1,20 @@
-import Button, { BUTTON_THEME, BUTTON_TEXT_COLOR } from './Button1';
+import Button, { BUTTON_THEME, BUTTON_LABEL_COLOR } from './Button1';
 import { COLORS } from '../theme';
 
 export default {
-  title: 'Example/Button1',
+  title: 'Example/CustomButton',
   component: Button,
+  argTypes: {
+    theme: {
+      control: { type: 'select' },
+    },
+    labelColor: {
+      description: 'If theme is whiteButton that can be used',
+      options: [BUTTON_LABEL_COLOR.RED, BUTTON_LABEL_COLOR.DARK],
+      control: { type: 'select' },
+    },
+    disabled: { control: 'boolean' },
+  },
   parameters: {
     backgrounds: {
       values: [
@@ -22,39 +33,73 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
+export const Default = Template.bind({});
+Default.args = {
+  children: 'Default',
+};
+Default.parameters = {
+  docs: {
+    source: {
+      code: `
+import CustomButton from '@components/CustomButton'
+
+<CustomButton onClick={() => {}}>
+  Default
+</CustomButton>
+`,
+    },
+  },
+};
+
 export const Monetization = Template.bind({});
 Monetization.args = {
   theme: BUTTON_THEME.RED,
-  label: 'Monetization',
+  children: 'Monetization',
 };
+// Monetization.parameters = {
+//   docs: {
+//     source: {
+//       code: `
+// <Button
+//   onClick={() => {}}
+//   theme="redButton"
+// >
+//   Monetization
+// </Button>`,
+//       language: 'jsx',
+//       type: 'auto',
+//       format: true,
+//     },
+//   },
+// };
 
 export const MonetizationWhite = Template.bind({});
 MonetizationWhite.args = {
   theme: BUTTON_THEME.WHITE,
-  label: 'Monetization',
-  labelColor: BUTTON_TEXT_COLOR.RED,
+  children: 'Monetization',
+  labelColor: BUTTON_LABEL_COLOR.RED,
 };
 
 export const Interactive = Template.bind({});
 Interactive.args = {
   theme: BUTTON_THEME.YELLOW,
-  label: 'Interactive',
+  children: 'Interactive',
 };
 
 export const InteractiveWhite = Template.bind({});
 InteractiveWhite.args = {
   theme: BUTTON_THEME.WHITE,
-  label: 'Interactive',
-  labelColor: BUTTON_TEXT_COLOR.DARK,
+  children: 'Interactive',
+  labelColor: BUTTON_LABEL_COLOR.DARK,
 };
 
 export const Disabled = Template.bind({});
 Disabled.args = {
   disabled: true,
-  label: 'Disabled',
+  children: 'Disabled',
 };
 
 export const LowerPriority = Template.bind({});
 LowerPriority.args = {
-  label: 'LowerPriority',
+  children: 'LowerPriority',
 };
