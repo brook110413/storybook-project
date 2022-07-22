@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 
-import { COLORS } from '../theme';
-import styles from './button1Style';
+import { COLORS } from '../../theme';
+import styles from './customButtonStyle';
 
 const useStyles = makeStyles(styles);
 

@@ -1,4 +1,4 @@
-const button1Style = (theme) => ({
+const customButtonStyle = (theme) => ({
   root: {
     borderRadius: '50px',
     textTransform: 'inherit',
@@ -10,6 +10,9 @@ const button1Style = (theme) => ({
     textFillColor: 'unset',
     color: theme.palette.common.dark,
     '&:hover': {
+      boxShadow: 'none',
+    },
+    '&:active': {
       boxShadow: 'none',
     },
     '&.Mui-disabled': {
@@ -40,8 +43,9 @@ const button1Style = (theme) => ({
     },
   }),
   label: {
+    wordBreak: 'break-word',
     ...theme.typography.button,
   },
 });
 
-export default button1Style;
+export default customButtonStyle;

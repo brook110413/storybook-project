@@ -1,9 +1,13 @@
-import Button, { BUTTON_THEME, BUTTON_LABEL_COLOR } from './Button1';
+import CustomButton, {
+  BUTTON_THEME,
+  BUTTON_LABEL_COLOR,
+} from '../components/CustomButton/CustomButton';
+
 import { COLORS } from '../theme';
 
 export default {
-  title: 'Example/CustomButton',
-  component: Button,
+  title: 'Components/CustomButton',
+  component: CustomButton,
   argTypes: {
     theme: {
       control: { type: 'select' },
@@ -31,7 +35,7 @@ export default {
   },
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => <CustomButton {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
