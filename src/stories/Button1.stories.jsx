@@ -24,26 +24,26 @@ const Template = (args) => <Button {...args} />;
 
 export const Monetization = Template.bind({});
 Monetization.args = {
-  bgTheme: BUTTON_THEME.RED,
+  theme: BUTTON_THEME.RED,
   label: 'Monetization',
 };
 
 export const MonetizationWhite = Template.bind({});
 MonetizationWhite.args = {
-  bgTheme: BUTTON_THEME.WHITE,
+  theme: BUTTON_THEME.WHITE,
   label: 'Monetization',
   labelColor: BUTTON_TEXT_COLOR.RED,
 };
 
 export const Interactive = Template.bind({});
 Interactive.args = {
-  bgTheme: BUTTON_THEME.YELLOW,
+  theme: BUTTON_THEME.YELLOW,
   label: 'Interactive',
 };
 
 export const InteractiveWhite = Template.bind({});
 InteractiveWhite.args = {
-  bgTheme: BUTTON_THEME.WHITE,
+  theme: BUTTON_THEME.WHITE,
   label: 'Interactive',
   labelColor: BUTTON_TEXT_COLOR.DARK,
 };
